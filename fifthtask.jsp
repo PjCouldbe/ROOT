@@ -16,14 +16,16 @@
 
 		<br />
 		
-		<%-- <center><h2>JSTL cycles</h2></center>
+		 <center><h2>JSTL cycles</h2></center>
 		<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 		<p><b>List of users: </b></p>
 		<%!java.util.List<com.itis.UserBean.User> list = userBean.getUserList();%>
-		<ol><c:forEach var="u" items = "${list}">
+		<ol><c:forEach var="user" items = "${userBean.getUserList()}">
 			<li><p>
-				<c:out value="${u.value}"/>
+				<c:out value="${user.getFirstname()}"/>
+				<c:out value="${user.getLastname()}"/>
+				<c:out value="${user.getAge()}"/>
 			</p></li>
-		</c:forEach></ol> --%>
+		</c:forEach></ol> 
 	</body>
-</html>
+</html>	
